@@ -1,0 +1,83 @@
+@model Assign1.Models.Student
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Details</title>
+</head>
+<body>
+
+<div>
+    <h3 class="text-center">
+        Student Details
+    </h3>
+    <hr />
+    <dl class="container">
+        <div class="row px-3 border-bottom">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+            <dd class = "col-sm-auto">
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+        </div>
+        
+        <div class="row px-3 border-bottom">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+            <dd class = "col-auto">
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+        </div>
+        
+        <div class="row px-3 border-bottom">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.MobileNumber)
+            </dt>
+            <dd class = "col-auto">
+                @Html.DisplayFor(model => model.MobileNumber)
+            </dd>
+        </div>
+
+        <div class="row px-3 border-bottom">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </dt>
+            <dd class = "col-sm-auto">
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+        </div>
+
+        <div class="row px-3 border-bottom">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.CityOfResidence)
+            </dt>
+            <dd class = "col-sm-auto">
+                @Html.DisplayFor(model => model.CityOfResidence)
+            </dd>
+        </div>
+
+        <div class="row px-3 border-bottom">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Specialization)
+            </dt>
+            <dd class = "col-sm-auto">
+                @Html.DisplayFor(model => model.Specialization)
+            </dd>
+        </div>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="text-info">Back to List</a>
+    <span class="text-secondary">|</span>
+    <a asp-action="Edit" asp-route-id="@Model.StudentId" class="text-warning">Edit</a> 
+    <span class="text-secondary">|</span>
+    <a asp-action="Delete" asp-route-id="@Model.StudentId" class="text-danger">
+        Delete
+    </a>
+</div>
+</body>
+</html>
